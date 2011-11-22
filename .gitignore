@@ -1,0 +1,8 @@
+.settings/
+stacktrace.log
+build/
+eclipse/
+target/
+test/reports/
+work/
+/web-app/
