@@ -11,14 +11,15 @@ grails.project.dependency.resolution = {
         grailsHome()
         grailsCentral()
         mavenCentral()
+		mavenRepo( 'http://repository.apache.org/snapshots/' )
     }
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
-        compile 'org.apache.shiro:shiro-core:1.1.0',
-                'org.apache.shiro:shiro-web:1.1.0',
-                'org.apache.shiro:shiro-ehcache:1.1.0',
-                'org.apache.shiro:shiro-quartz:1.1.0',
-                'org.apache.shiro:shiro-spring:1.1.0', {
+        compile 'org.apache.shiro:shiro-core:1.2.0-SNAPSHOT',
+                'org.apache.shiro:shiro-web:1.2.0-SNAPSHOT',
+                'org.apache.shiro:shiro-ehcache:1.2.0-SNAPSHOT',
+                'org.apache.shiro:shiro-quartz:1.2.0-SNAPSHOT',
+                'org.apache.shiro:shiro-spring:1.2.0-SNAPSHOT', {
             excludes 'ejb', 'jsf-api', 'jms', 'connector-api', 'ehcache-core', 'slf4j-api'
         }
     }
