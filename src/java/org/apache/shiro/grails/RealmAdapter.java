@@ -23,11 +23,13 @@ package org.apache.shiro.grails;
 import org.apache.shiro.realm.Realm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.authz.AuthorizationException;
+import org.apache.shiro.authz.Authorizer;
 import org.apache.shiro.authz.Permission;
 import org.apache.shiro.authz.permission.InvalidPermissionStringException;
 import org.apache.shiro.authz.permission.PermissionResolver;
 import org.apache.shiro.authz.permission.PermissionResolverAware;
 import org.apache.shiro.authz.permission.WildcardPermission;
+
 
 import java.util.List;
 import java.util.ArrayList;
@@ -39,7 +41,7 @@ import java.util.Arrays;
  * "String..." methods under JDK 1.5. So, these methods automatically
  * convert the strings into WildcardPermission instances.
  */
-public abstract class RealmAdapter implements Realm, PermissionResolverAware {
+public abstract class RealmAdapter implements Realm, PermissionResolverAware, Authorizer {
     PermissionResolver permResolver = null;
 
     public void setPermissionResolver(PermissionResolver pr) {
